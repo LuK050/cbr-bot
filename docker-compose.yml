@@ -1,0 +1,21 @@
+version: "3"
+
+services:
+  bot:
+    build: .
+    env_file: ".env"
+    container_name: "cbr-bot"
+    command: "poetry run python ./cbr_bot/bot.py"
+    restart: "always"
+    volumes:
+      - ".:/usr/src/cbr_bot"
+    depends_on:
+      - "redis"
+
+  redis:
+    image: "redis"
+    env_file: ".env"
+    restart: "always"
+
+volumes:
+  pgdbdata: null

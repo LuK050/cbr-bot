@@ -1,13 +1,16 @@
 [tool.poetry]
-name = "python-template"
-version = "0.0.0"
-description = ""
-authors = ["Your Name <you@example.com>"]
+name = "cbr-bot"
+version = "1.0.0"
+description = "Test task for Junior Python Developer"
+authors = ["Kirill Volychev <volychevk@gmail.com>"]
 readme = "README.md"
-packages = [{include = "python_template"}]
+packages = [{include = "cbr_bot"}]
 
 [tool.poetry.dependencies]
-python = "^3.11"
+python = "^3.12"
+aiogram = "^3.10.0"
+python-dotenv = "^1.0.1"
+redis = "^5.0.7"
 
 [tool.poetry.group.dev.dependencies]
 black = "^23.7.0"
